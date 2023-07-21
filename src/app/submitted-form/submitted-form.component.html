@@ -1,0 +1,143 @@
+<div fxLayout="row" fxLayoutAlign="start center" fxFlexFill class="header">
+  <mat-card fxFlex="20">
+    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+      <p *ngFor="let tests of submit | keyvalue">
+        {{ tests.key }} : {{ tests.value }}
+      </p>
+      <button mat-raised-button color="warn" (click)="clickedButton()">
+        Edit
+      </button>
+    </form>
+    <div fxLayout="column" fxLayoutAlign="center stretch">
+      <div fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+        <button mat-raised-button color="warn" (click)="popup = true">
+          submit
+        </button>
+      </div>
+    </div>
+    <div class="overlay" *ngIf="popup">
+      <div class="popup">
+        <h2>Hello {{ submit.Name }}</h2>
+        <a class="close" (click)="popup = false">&times;</a>
+        <div class="content">Response Submitted Successfully</div>
+      </div>
+    </div>
+  </mat-card>
+</div>
+<app-usertable [hidden]="popup"> </app-usertable> -->
+
+<!-- <div fxLayoutAlign="center center" routerLink="/submit">
+  <div fxLayout="column">
+    <mat-form-field appearance="outline">
+      <mat-label>search</mat-label>
+      <input matInput placeholder="search" [(ngModel)]="searchText" />
+    </mat-form-field>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Course</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employees | filter : searchText">
+          <td>{{ emp.id }}</td>
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.email }}</td>
+          <td>{{ emp.gender }}</td>
+          <td>{{ emp.course }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <mat-paginator [length]="this.employeeItems.length"
+                 [pageSize]="3"
+                 [pageSizeOptions]="[3, 6, 9]"
+                 (page)="onPageChange($event)">
+  </mat-paginator> -->
+
+<!-- <div fxLayoutAlign ="start stretch" fxFlexFill class ="ss"> 
+  <mat-card fxFlex ="20" >
+    <div fxLayoutAlign ="stretch" fxLayout ="column" class="login-form">
+    <p *ngFor = "let tests of submit | keyvalue"> {{ tests.key }} : {{ tests.value }}</p>  
+    <button mat-raised-button color="warn" (click) ="submits()">submit</button>
+    </div>
+  </mat-card>
+</div> -->
+
+<!-- 
+<div fxLayoutAlign ="center center" fxFlexFill> 
+ <mat-card fxFlex ="20" >
+<form fxLayoutAlign ="stretch" fxLayout ="column" class="login-form">
+    <mat-label>Name : {{ submit.Name }}</mat-label>
+    <mat-label>Address : {{ submit.Address }}</mat-label>
+    <mat-label>State : {{ submit.State }}</mat-label>
+    <mat-label>District : {{ submit.District }}</mat-label>
+    <mat-label>City : {{ submit.City }}</mat-label>
+    <mat-label>Pincode :{{ submit.Pincode }}</mat-label>
+    <button mat-raised-button color="warn">Edit</button>
+   </form>
+</mat-card>
+ 
+</div> -->
+<!-- <div *ngFor ="let hobby of hobbiesArray.controls; last as isLast; index as idx " class="input-row">
+  <mat-form-field appearance="standard">
+    <mat-label>Add hobbies</mat-label>
+    <input matInput [formControl] ="hobby">
+  </mat-form-field>
+  <button mat-icon-button color ="warn" (click)="removeInputControl(idx)"  *ngIf ="hobbiesArray.length > 1">
+    <mat-icon>remove_circle</mat-icon>
+  </button>
+  <button mat-icon-button color ="primary" *ngIf = "isLast" (click)="addInputControl()">
+    <mat-icon>add_circle</mat-icon>
+  </button>
+</div> -->
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+<!-- Position Column -->
+<!-- <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+    </ng-container> -->
+
+<!-- Name Column -->
+<!-- <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container> -->
+
+<!-- Weight Column -->
+<!-- <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef>Weight</th>
+      <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+    </ng-container> -->
+
+<!-- Symbol Column -->
+<!-- <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef>Symbol</th>
+      <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div> -->
+<div>
+  <mat-toolbar color="primary">
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="home"
+    ></mat-icon>
+    <span>Material UI</span>
+    <span class="example-spacer"></span>
+
+    <button mat-raised-button color="warn">Add employee</button>
+  </mat-toolbar>
+</div>

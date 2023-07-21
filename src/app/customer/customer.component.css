@@ -1,0 +1,11 @@
+button {
+    position: absolute;
+    right: 197px;
+    top:20px;
+}
+.logout {
+    position: absolute;
+    right: 25px;
+    top:10px;
+
+}

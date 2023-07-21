@@ -1,0 +1,64 @@
+<div fxLayoutAlign="center center" fxFlexFill style="background-color: darkcyan">
+  <mat-card fxFlex="20">
+    <mat-toolbar color="warn" class="login">
+      <span> Contact Management System</span>
+    </mat-toolbar>
+
+    <form
+      fxLayoutAlign="stretch"
+      fxLayout="column"
+      class="login-form"
+      (ngSubmit)="onSubmit()"
+      #myForm="ngForm"
+    >
+      <mat-form-field appearance="outline">
+        <mat-label>User</mat-label>
+
+        <input
+          matInput
+          placeholder="Enter Email-Address"
+          name="email"
+          ngModel
+          email
+          required
+          #email="ngModel"
+        />
+        <mat-error *ngIf="email.touched && !email.valid"
+          >Please Enter email</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder="Enter Password"
+          type="password"
+          minlength="9"
+          maxlength="12"
+          name="password"
+          ngModel
+          required
+          #password="ngModel"
+        />
+        <mat-error *ngIf="password.touched && !password.valid"
+          >Please Enter password
+        </mat-error>
+        <mat-error *ngIf="!password.valid && password.errors?.['minlength']"
+          >min of 9 & max of 12</mat-error
+        >
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="warn"
+        [disabled]="!myForm.valid"
+        class="submit">
+        SignIn
+      </button>
+    </form>
+  </mat-card>
+</div>
+
+
+<!-- *ngIf ="email.value === 'admin@gmail.com' && password.value === 'Relevantz'" -->

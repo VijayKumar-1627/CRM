@@ -1,0 +1,135 @@
+<h1 mat-dialog-title>
+  Add Customer Details 
+  <mat-icon class="example-spacer" mat-dialog-close>clear</mat-icon>
+</h1>
+
+<div mat-dialog-content>
+  <form
+    fxLayoutAlign="stretch"
+    fxLayout="column"
+    class="login-form"
+    [formGroup]="formGroup"
+    (ngSubmit)="submitregistration()"
+  >
+    <mat-label>Name</mat-label>
+    <mat-form-field appearance="outline">
+      <input
+        matInput
+        placeholder="Enter your Name"
+        formControlName="Name"
+        onkeypress="return (event.charCode > 64 && 
+            event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
+      />
+      <mat-error *ngIf="formGroup.controls.Name.status === 'INVALID'"
+        >Please Enter Name</mat-error
+      >
+    </mat-form-field>
+    <mat-label>Address</mat-label>
+    <mat-form-field appearance="outline">
+      <textarea matInput formControlName="Address"></textarea>
+      <mat-error *ngIf="formGroup.controls.Address.status === 'INVALID'"
+        >Please Enter Address</mat-error
+      >
+    </mat-form-field>
+    <mat-label>Select State</mat-label>
+    <mat-form-field appearance="outline">
+      <mat-select
+        formControlName="State"
+        (selectionChange)="onSelectChange($event.value)"
+      >
+        <mat-option *ngFor="let states of state" value="{{ states.name }}">{{
+          states.name
+        }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="formGroup.controls.State.status === 'INVALID'"
+        >Please Select State</mat-error
+      >
+    </mat-form-field>
+    <mat-label>Select district</mat-label>
+    <mat-form-field appearance="outline">
+      <mat-select
+        formControlName="District"
+        (selectionChange)="onSelectChangeDistrict($event.value)"
+      >
+        <mat-option *ngFor="let district of city" value="{{ district.name }}">{{
+          district.name
+        }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="formGroup.controls.District.status === 'INVALID'"
+        >Please Select State for District</mat-error
+      >
+    </mat-form-field>
+    <!-- <mat-label>City</mat-label>
+    <mat-form-field appearance="outline">
+      <input
+        matInput
+        placeholder="Enter your City"
+        formControlName="City"
+        onkeypress="return (event.charCode > 64 && 
+            event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
+      />
+      <mat-error *ngIf="formGroup.controls.City.status === 'INVALID'"
+        >Please City</mat-error
+      >
+    </mat-form-field> -->
+    <mat-label>PinCode</mat-label>
+    <mat-form-field appearance="outline">
+      <input
+        matInput
+        placeholder="Enter your Pincode"
+        onlyNumbers
+        formControlName="Pincode"
+        (keydown)="keyDown($event)"
+      />{{ pincode }}
+      <!-- <mat-select formControlName="Pincode">
+        <mat-option
+          *ngFor="let Pincode of pincode"
+          OnlyNumber
+          value="{{ Pincode.name }}"
+          >{{ Pincode.name }}</mat-option
+        >
+      </mat-select> -->
+      <mat-error *ngIf="formGroup.controls.Pincode.status === 'INVALID'"
+        >Please Enter Pincode</mat-error
+      >
+    </mat-form-field>
+    <mat-label>Phone</mat-label>
+    <mat-form-field appearance="outline">
+      <input (input)="onInputChange($event)"
+        matInput 
+        placeholder="Enter your Phone Number"
+        formControlName="Phone" maxlength="10"
+      />
+      <mat-error *ngIf="formGroup.controls.Name.status === 'INVALID'"
+        >Please Enter your Phone Number</mat-error
+      >
+    </mat-form-field>
+    <div formArrayName="skills">
+      <mat-label>Skills </mat-label>
+      <mat-icon (click)="addSkills()" class="addskills">add_circle</mat-icon>
+      <div
+        *ngFor="let skill of formGroup.get('skills')['controls']; index as idx"
+      >
+      
+        <mat-form-field appearance="outline">
+          <input
+            matInput 
+            placeholder="Enter skills"
+            formControlName="{{ idx }}"
+          />
+        </mat-form-field>
+      </div>
+      
+    </div>
+
+    <button
+      mat-raised-button
+      class="buttons"
+      color="warn"
+      (click)="actionButton === 'Save' ? postCustomersDetails() : updateCustomer()"
+      [disabled]="!formGroup.valid"
+    >
+      {{ actionButton }}
+    </button>
+  </form>
+</div>

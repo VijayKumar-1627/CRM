@@ -1,0 +1,185 @@
+{
+  "CustomersDetails": [
+    {
+      "Name": "Vignesh",
+      "Address": "kerala",
+      "State": "Kerala",
+      "District": "Kolam",
+      "Pincode": 133456,
+      "Phone": "9555323233",
+      "skills": [
+        "React Native"
+      ],
+      "id": 7
+    },
+    {
+      "Name": "Ram",
+      "Address": "Kerala",
+      "State": "Kerala",
+      "District": "Kochi",
+      "Pincode": 13457,
+      "Phone": "999233233",
+      "skills": [
+        "Java Script"
+      ],
+      "id": 8
+    },
+    {
+      "Name": "Vijay",
+      "Address": "Trichy",
+      "State": "Tamil Nadu",
+      "District": "Trichy",
+      "Pincode": 12345,
+      "Phone": "984228787",
+      "skills": [
+        "Angular Type Script"
+      ],
+      "id": 9
+    },
+    {
+      "Name": "Suren",
+      "Address": "Palani",
+      "State": "Tamil Nadu",
+      "District": "palani",
+      "Pincode": 12344,
+      "Phone": "922888883",
+      "skills": [
+        "Ext Java Script"
+      ],
+      "id": 10
+    },
+    {
+      "Name": "Nivin",
+      "Address": "Kerala",
+      "State": "Kerala",
+      "District": "Kochi",
+      "Pincode": 13457,
+      "Phone": "567890543",
+      "skills": [
+        "Azure Devops"
+      ],
+      "id": 11
+    },
+    {
+      "Name": "Ramesh",
+      "Address": "Trichy",
+      "State": "Tamil Nadu",
+      "District": "Trichy",
+      "Pincode": 12345,
+      "Phone": "902323233",
+      "skills": [
+        "Angular"
+      ],
+      "id": 12
+    },
+    {
+      "Name": "Sudhan",
+      "Address": "Trichy",
+      "State": "Tamil Nadu",
+      "District": "Trichy",
+      "Pincode": 12345,
+      "Phone": "0908080808",
+      "skills": [
+        "Network engineer"
+      ],
+      "id": 14
+    },
+    {
+      "Name": "Vignesh",
+      "Address": "Trichy",
+      "State": "Tamil Nadu",
+      "District": "Trichy",
+      "Pincode": 12345,
+      "Phone": "89809789787",
+      "skills": [
+        "React JS",
+        "Angular"
+      ],
+      "id": 15
+    },
+    {
+      "Name": "Vikram",
+      "Address": "Trichy",
+      "State": "Kerala",
+      "District": "Kolam",
+      "Pincode": 133456,
+      "Phone": "983444774",
+      "skills": [
+        "Support Enginer"
+      ],
+      "id": 16
+    },
+    {
+      "Name": "Nithish",
+      "Address": "Kerala",
+      "State": "Kerala",
+      "District": "Kochi",
+      "Pincode": 13457,
+      "Phone": "9098769989",
+      "skills": [
+        "DevOps Engineer"
+      ],
+      "id": 17
+    },
+    {
+      "Name": "Rahul",
+      "Address": "Trichy",
+      "State": "Tamil Nadu",
+      "District": "Trichy",
+      "Pincode": 12345,
+      "Phone": "9453454545",
+      "skills": [
+        "Test Engineer"
+      ],
+      "id": 18
+    },
+    {
+      "Name": "Sanjay",
+      "Address": "Trichy",
+      "State": "Tamil Nadu",
+      "District": "Trichy",
+      "Pincode": 12345,
+      "Phone": "94656165551",
+      "skills": [
+        "Support Engineer"
+      ],
+      "id": 19
+    },
+    {
+      "Name": "shiva",
+      "Address": "T",
+      "State": "Tamil Nadu",
+      "District": "Trichy",
+      "Pincode": 12345,
+      "Phone": "136153615",
+      "skills": [
+        "Support Engineer"
+      ],
+      "id": 20
+    },
+    {
+      "Name": "Abdul",
+      "Address": "Rameswaram",
+      "State": "Tamil Nadu",
+      "District": "Trichy",
+      "Pincode": 12345,
+      "Phone": "909876909",
+      "skills": [
+        "PHP"
+      ],
+      "id": 21
+    },
+    {
+      "Name": "vk",
+      "Address": "efewfwef",
+      "State": "Tamil Nadu",
+      "District": "palani",
+      "Pincode": 12344,
+      "Phone": "8798784684",
+      "skills": [
+        "ng"
+      ],
+      "id": 22
+    }
+  ]
+}

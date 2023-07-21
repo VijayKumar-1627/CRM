@@ -1,0 +1,70 @@
+.login {
+  height: 50px;
+  width: 100%;
+  align-content: flex-end;
+  background-color: lightcyan;
+}
+
+.buttons {
+  background-color: lightcyan;
+}
+.exportbuttons {
+  background-color: lightcyan;
+  margin: 7px;
+  cursor: pointer;
+}
+.login-form {
+  padding: 20px;
+}
+hr {
+  height: 2px;
+}
+.email-header {
+  margin-top: -46px;
+  font-weight: bold;
+}
+
+.headers {
+  padding: 18px;
+  margin-bottom: 5px;
+  background-color: rgb(101, 228, 228);
+}
+.forms {
+  padding: 25px;
+  overflow: auto;
+}
+
+.mat-table {
+  overflow: auto;
+  height: 696px;
+  position: sticky;
+}
+
+.mat-row {
+  /* display: inline-flex; */
+  min-width: 100%;
+  width: 100%;
+  position: sticky;
+  vertical-align: middle;
+  border-spacing: 1em 0;
+  border-collapse: separate;
+}
+.mat-header-cell {
+  width: 100px;
+  vertical-align: middle;
+}
+.mat-header-row {
+  background-color: lightcyan;
+  position: sticky;
+}
+.mat-cell {
+  vertical-align: middle;
+  width: 125px;
+}
+.mat-icon {
+  color: black;
+  position: relative;
+  align-items: center;
+  margin-left: 147px;
+  margin-bottom: -52px;
+}

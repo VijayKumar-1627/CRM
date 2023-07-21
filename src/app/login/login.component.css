@@ -1,0 +1,11 @@
+.login {
+    height: 50px;
+    width: 100%;
+    align-content: flex-end;
+}
+.login-form {
+    padding: 20px;
+}
+.submit {
+    margin-top: 14px;
+}
